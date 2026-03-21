@@ -6,43 +6,48 @@
   <link rel="icon" type="image/svg+xml" href='data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> <text y=".9em" font-size="80">💖</text> </svg>'>
 
   <style>
-    body {
-      margin: 0;
-      background: #F2EEE3;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    html, body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;        /* chuẩn iPhone */
+  overflow: hidden;      /* ❌ tắt scroll */
+  touch-action: none;    /* ❌ chặn vuốt */
+  background: #F2EEE3;
+}
 
-    .page {
-      display: none;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-    }
+/* Page full màn hình */
+.page {
+  display: none;
+  width: 100%;
+  height: 100dvh;
+  position: fixed;       /* fix cứng luôn */
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+}
 
-    .page img {
-      max-width: 100%;
-        max-height: 100vh;
-        object-fit: contain;
-    }
+/* Page 1 hiện */
+#page1 {
+  display: flex;
+}
 
-    /* Page 1 hiển thị mặc định */
-    #page1 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+/* Page 2 nền trắng */
+#page2 {
+  background: #fff;
+}
 
-        #page2 {
-    background: #fff;
-    padding-top: 500px;
-    }
+/* Ảnh luôn fit màn hình */
+.page img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
 
-    #page2 img {
+/* QR nhỏ lại 30% */
+#page2 img {
   max-width: 70%;
-  max-height: 70dvh;
+  max-height: 70%;
 }
   </style>
 </head>
