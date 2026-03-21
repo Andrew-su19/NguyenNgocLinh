@@ -17,10 +17,10 @@
 
 /* Page full màn hình */
 .page {
-  display: none;
+ display: none;       /* tất cả ẩn */
   width: 100%;
   height: 100dvh;
-  position: fixed;       /* fix cứng luôn */
+  position: fixed;
   top: 0;
   left: 0;
   justify-content: center;
@@ -35,6 +35,8 @@
 /* Page 2 nền trắng */
 #page2 {
   background: #fff;
+  justify-content: center;    /* căn giữa ngang */
+  align-items: center; 
 }
 
 /* Ảnh luôn fit màn hình */
@@ -46,8 +48,10 @@
 
 /* QR nhỏ lại 30% */
 #page2 img {
-  max-width: 70%;
+   max-width: 70%;
   max-height: 70%;
+  object-fit: contain;
+  display: block;
 }
   </style>
 </head>
@@ -66,7 +70,7 @@
   <script>
     function nextPage() {
       document.getElementById("page1").style.display = "none";
-      document.getElementById("page2").style.display = "block";
+      document.getElementById("page2").style.display = "flex";
     }
   </script>
 
